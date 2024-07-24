@@ -3,7 +3,7 @@ version: '${project.version}'
 main: etc.soap.healonkill.HealOnKill
 api-version: 1.19
 softdepend: [ WorldGuard ]
-authors: [ raffel080108 ]
+authors: [ Soap ]
 
 commands:
   healonkill:

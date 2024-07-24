@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97ce5985-9930-4034-918a-9d19e071a250" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HealOnKill.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/etc/soap/healonkill/Commands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/etc/soap/healonkill/HealOnKill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/etc/soap/healonkill/KillHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/etc/soap/healonkill/WGHookHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/HealOnKill-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/etc/soap/healonkill/Commands.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/etc/soap/healonkill/HealOnKill.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/etc/soap/healonkill/KillHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/etc/soap/healonkill/WGHookHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/original-HealOnKill-1.0.jar" afterDir="false" />
-    </list>
+    <list default="true" id="97ce5985-9930-4034-918a-9d19e071a250" name="Changes" comment="Initial plugin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +12,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
@@ -48,7 +29,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/lenovo/Downloads/jars/HealOnKillHook",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
@@ -62,6 +42,15 @@
       <option name="presentableId" value="Default" />
       <updated>1721833383097</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial plugin">
+      <option name="closed" value="true" />
+      <created>1721834350305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721834350305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,5 +63,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial plugin" />
   </component>
 </project>
