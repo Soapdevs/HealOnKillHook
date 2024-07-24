@@ -1,0 +1,207 @@
+Index: target/classes/config.yml
+===================================================================
+diff --git a/target/classes/config.yml b/target/classes/config.yml
+deleted file mode 100644
+--- a/target/classes/config.yml	(revision d19798ba4f51012fd10a366d2b62c58166107e55)
++++ /dev/null	(revision d19798ba4f51012fd10a366d2b62c58166107e55)
+@@ -1,20 +0,0 @@
+-# Invalid values will be treated as default values without further informing
+-# If an invalid configuration file is detected, it will be automatically backed-up and regenerated
+-
+-# Modes: Instant, Effect
+-# Instant: Will instantly heal the player to full health
+-# Effect: Will apply an effect to the player with specified amplifier and duration (configure below)
+-mode: Effect
+-
+-# Below only applies when mode is set to Effect
+-effect:
+-  # Effects: Instant-Health or Regeneration
+-  type: Regeneration
+-  duration: 3 # (in seconds)
+-  amplifier: 4
+-  particles: false
+-
+-# When the WorldGuard hook is activated, the plugin will add a custom flag named "heal-on-kill".
+-# The plugin's function will only be active if a region has this flag set to "allow" (It will be "deny" by default in a region)
+-# Changes only apply after server restart
+-worldguard-hook: true
+\ No newline at end of file
+Index: target/maven-archiver/pom.properties
+===================================================================
+diff --git a/target/maven-archiver/pom.properties b/target/maven-archiver/pom.properties
+deleted file mode 100644
+--- a/target/maven-archiver/pom.properties	(revision d19798ba4f51012fd10a366d2b62c58166107e55)
++++ /dev/null	(revision d19798ba4f51012fd10a366d2b62c58166107e55)
+@@ -1,3 +0,0 @@
+-artifactId=HealOnKill
+-groupId=etc.soap.healonkill
+-version=1.0
+Index: target/classes/plugin.yml
+===================================================================
+diff --git a/target/classes/plugin.yml b/target/classes/plugin.yml
+deleted file mode 100644
+--- a/target/classes/plugin.yml	(revision d19798ba4f51012fd10a366d2b62c58166107e55)
++++ /dev/null	(revision d19798ba4f51012fd10a366d2b62c58166107e55)
+@@ -1,10 +0,0 @@
+-name: HealOnKill
+-version: '1.0'
+-main: etc.soap.healonkill.HealOnKill
+-api-version: 1.19
+-softdepend: [ WorldGuard ]
+-authors: [ raffel080108 ]
+-
+-commands:
+-  healonkill:
+-    description: HealOnKill Commands
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1721834321264)
++++ b/.idea/jarRepositories.xml	(date 1721834321264)
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="sonatype" />
++      <option name="name" value="sonatype" />
++      <option name="url" value="https://oss.sonatype.org/content/groups/public/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="papermc-repo" />
++      <option name="name" value="papermc-repo" />
++      <option name="url" value="https://repo.papermc.io/repository/maven-public/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="sk89q-repo" />
++      <option name="name" value="sk89q-repo" />
++      <option name="url" value="https://maven.enginehub.org/repo/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1721834321253)
++++ b/.idea/encodings.xml	(date 1721834321253)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1721834321237)
++++ b/.idea/compiler.xml	(date 1721834321237)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="HealOnKill" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1721834321224)
++++ b/.idea/misc.xml	(date 1721834321224)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="EntryPointsManager">
++    <list size="1">
++      <item index="0" class="java.lang.String" itemvalue="org.bukkit.event.EventHandler" />
++    </list>
++  </component>
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="corretto-21" project-jdk-type="JavaSDK" />
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1721834321273)
++++ b/.idea/vcs.xml	(date 1721834321273)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1721834321201)
++++ b/.idea/modules.xml	(date 1721834321201)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/HealOnKill.iml" filepath="$PROJECT_DIR$/HealOnKill.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
