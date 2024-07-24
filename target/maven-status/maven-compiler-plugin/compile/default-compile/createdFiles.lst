@@ -1,0 +1,4 @@
+etc\soap\healonkill\HealOnKill.class
+etc\soap\healonkill\Commands.class
+etc\soap\healonkill\KillHandler.class
+etc\soap\healonkill\WGHookHandler.class

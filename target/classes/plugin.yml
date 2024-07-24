@@ -1,0 +1,10 @@
+name: HealOnKill
+version: '1.0'
+main: etc.soap.healonkill.HealOnKill
+api-version: 1.19
+softdepend: [ WorldGuard ]
+authors: [ raffel080108 ]
+
+commands:
+  healonkill:
+    description: HealOnKill Commands
