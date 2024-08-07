@@ -7,3 +7,5 @@ Usage: /rg flag (regioname) heal-on-kill allow/deny
 Please look at the config file for more settings.
 
 Original was developed by @raffel080108 on bukkit forums.
+
+This version is customized for my server & is generally alot faster
