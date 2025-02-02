@@ -1,7 +1,7 @@
 name: HealOnKill
 version: '${project.version}'
 main: etc.soap.healonkill.HealOnKill
-api-version: 1.19
+api-version: 1.21
 softdepend: [ WorldGuard ]
 authors: [ Soapdev ]
 

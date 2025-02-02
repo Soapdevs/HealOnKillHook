@@ -8,7 +8,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
@@ -17,27 +16,27 @@ public final class HealOnKill extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        // Initialization that does not depend on configuration
+        if (wgHookActive && Bukkit.getPluginManager().getPlugin("WorldGuard") != null)
+            new WGHookHandler(this).registerFlag();
+        else {
+            wgHookActive = false;
+            getLogger().severe("Failed to detect WorldGuard. WorldGuard hook disabled automatically");
+        }
     }
 
     @Override
     public void onEnable() {
-        saveDefaultConfig();
-        invalidConfigCheck();
-
-        // Initialize wgHookActive after loading the config
-        wgHookActive = getConfig().getBoolean("worldguard-hook");
-
         if (wgHookActive && Bukkit.getPluginManager().getPlugin("WorldGuard") != null) {
             WGHookHandler wgHookHandler = new WGHookHandler(this);
             wgHookHandler.registerFlag();
+            getLogger().info("WorldGuard hook and flag registered during onEnable.");
         } else {
             wgHookActive = false;
-            getLogger().severe("Failed to detect WorldGuard. WorldGuard hook disabled automatically.");
+            getLogger().warning("WorldGuard not detected or disabled in config. Hook disabled.");
         }
 
+        // Register commands and event listeners after loading config and WorldGuard hook status
         KillHandler killHandler = new KillHandler(this);
-        //noinspection ConstantConditions
         getCommand("healonkill").setExecutor(new Commands(this, killHandler));
         Bukkit.getPluginManager().registerEvents(killHandler, this);
 
@@ -57,16 +56,15 @@ public final class HealOnKill extends JavaPlugin {
             YamlConfiguration config = new YamlConfiguration();
             config.load(configFile);
         } catch (IOException e) {
-            e.printStackTrace();
+            getLogger().severe("Error loading configuration file: " + e.getMessage());
         } catch (InvalidConfigurationException e) {
-            getLogger().warning("----------");
+            getLogger().warning("Invalid configuration detected. Backing up and regenerating config.yml...");
             try {
                 Files.copy(configFile.toPath(), backupFile.toPath(), REPLACE_EXISTING);
                 saveResource("config.yml", true);
-                getLogger().warning("Invalid configuration detected - Current configuration was backed up to old_config.yml and a new config.yml generated.");
+                getLogger().info("Configuration was backed up to old_config.yml, and a new config.yml was generated.");
             } catch (IOException e2) {
-                e2.printStackTrace();
-                getLogger().severe("Invalid configuration detected - Configuration backup failed.");
+                getLogger().severe("Failed to back up invalid configuration: " + e2.getMessage());
             }
         }
     }

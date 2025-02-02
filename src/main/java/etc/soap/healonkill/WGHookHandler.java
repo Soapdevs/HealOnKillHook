@@ -49,6 +49,7 @@ public class WGHookHandler {
         }.runTaskAsynchronously(main);
     }
 
+
     // Changed access modifier to public
     public boolean flagTest(Player player) {
         if (healOnKillFlag == null) {

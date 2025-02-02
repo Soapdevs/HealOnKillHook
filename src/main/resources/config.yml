@@ -1,4 +1,4 @@
-# Invalid values will be treated as default values without further informing
+# Invalid values will be treated as default values
 # If an invalid configuration file is detected, it will be automatically backed-up and regenerated
 
 # Modes: Instant, Effect

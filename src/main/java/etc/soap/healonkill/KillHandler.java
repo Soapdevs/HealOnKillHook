@@ -40,7 +40,7 @@ public class KillHandler implements Listener {
           Bukkit.getScheduler().runTask(main, () -> {
             if (main.getConfig().getString("mode").equalsIgnoreCase("Instant")) {
                 // Directly set the player's health to maximum
-                double maxHealth = target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue();
+                double maxHealth = target.getAttribute(Attribute.MAX_HEALTH).getBaseValue();
                 target.setHealth(maxHealth);
             } else {
                 PotionEffectType type;
@@ -53,7 +53,7 @@ public class KillHandler implements Listener {
                     target.addPotionEffect(new PotionEffect(type, duration, amplifier, false, main.getConfig().getBoolean("effect.particles")));
 
                     // Optionally set the player's health directly if regeneration is not instant enough
-                    double maxHealth = target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue();
+                    double maxHealth = target.getAttribute(Attribute.MAX_HEALTH).getBaseValue();
                     target.setHealth(maxHealth);
                 } else {
                     type = PotionEffectType.REGENERATION;
